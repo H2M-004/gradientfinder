@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		div{
+			background-color: pink;
+		}
+	<title>gradientee</title>
+	</style>
+</head>
+<body>
+<form name="form">
+<div>
+	<fieldset>
+		<legend><b>GRADIENT FINDER</legend><b>
+			<p id="h2m"></p>
+		<H1>Coordinate of point One:</H1>
+		<label>Enter X1</label>
+		<input type="number" id="h2m"  name="X1"><br><br>
+		<label>enter Y1</label>
+		<input type="number" id="h2m" name="Y1"><br><br>
+		<h1>coordinate of point two:</h1>
+		<label>Enter X2</label>
+		<input type="number" id="h2m" name="X2"><br><br>
+		<label>enter Y2</label>
+		<input type="number" id="h2m" name="Y2"><br><br>
+		<input type="button" onclick="gradient()" value="calculate slope" id="h2m" name="slope">
+		<input type="reset" name="nowreset" value="clear" name="">
+
+
+</div>
+	</fieldset>
+</form>
+<script type="text/javascript">
+	function gradient() {
+		let X1=document.form.X1.value;
+		//alert(X1);//
+		let Y1=document.form.Y1.value;
+		//alert(Y1);//
+		let X2=document.form.X2.value;
+		//alert(X2);//
+		let Y2=document.form.Y2.value;
+		//alert(Y2);//
+		let slope;
+		slope=(Y2-Y1)/(X2-X1);
+		alert("The slope is" +slope);
+        slope=Math.round(slope,3)
+		//+sign concatinate the text and the value of slope//
+		//document.form.slope.value=slope;
+		//alert(slope);		
+		//alert("the slope is",slope,"units")
+	}
+</script>
+</body>
+</html>
